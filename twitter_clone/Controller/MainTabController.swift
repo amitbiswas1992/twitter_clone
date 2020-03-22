@@ -15,27 +15,35 @@ class MainTabController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       configureViewControllers()
+        configureViewControllers()
     }
     
     //MARK: - Helpers
     
     func configureViewControllers() {
         
-        let feed = FeedController()
-        feed.tabBarItem.image = UIImage(named: "home_unselected")
+        let feed      = FeedController()
+        let navbarOne = templateNavigationController(image: UIImage(named: "home_unselected"), rootViewController: feed)
         
-        let explore = ExploreController()
-        explore.tabBarItem.image = UIImage(named: "search_unselected")
-       
+        let explore   = ExploreController()
+        let navbarTwo = templateNavigationController(image: UIImage(named: "search_unselected"), rootViewController: explore)
+        
         let notifications = NotificationsController()
-        notifications.tabBarItem.image = UIImage(named: "like")
+        let navbarThree   = templateNavigationController(image: UIImage(named: "like"), rootViewController: notifications)
         
         let conversations = ConversationsController()
-        conversations.tabBarItem.image = UIImage(named: "mail")
+        let navbarFour    = templateNavigationController(image: UIImage(named: "mail"), rootViewController: conversations)
         
-        viewControllers = [feed, explore, notifications, conversations]
+        
+        viewControllers = [navbarOne, navbarTwo, navbarThree, navbarFour]
     }
     
-
+    func templateNavigationController (image: UIImage?, rootViewController: UIViewController) -> UINavigationController {
+        let navbar = UINavigationController(rootViewController: rootViewController)
+        navbar.tabBarItem.image = image
+        navbar.navigationBar.barTintColor = .white
+        return navbar
+        
+    }
+    
 }
