@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EA9B17224283BE000E325A5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9B17124283BE000E325A5 /* Extensions.swift */; };
 		5EF94AA12425CF3600AADB4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF94AA02425CF3600AADB4D /* AppDelegate.swift */; };
 		5EF94AA32425CF3600AADB4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF94AA22425CF3600AADB4D /* SceneDelegate.swift */; };
 		5EF94AA82425CF3600AADB4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF94AA62425CF3600AADB4D /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5EA9B17124283BE000E325A5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5EF94A9D2425CF3600AADB4D /* twitter_clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twitter_clone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF94AA02425CF3600AADB4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EF94AA22425CF3600AADB4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		5EF94AB42425D10F00AADB4D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				5EA9B17124283BE000E325A5 /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				5EF94AC124280D7B00AADB4D /* NotificationsController.swift in Sources */,
 				5EF94AC324280D9600AADB4D /* ConversationsController.swift in Sources */,
 				5EF94ABB24280B1700AADB4D /* MainTabController.swift in Sources */,
+				5EA9B17224283BE000E325A5 /* Extensions.swift in Sources */,
 				5EF94ABF24280D6A00AADB4D /* ExploreController.swift in Sources */,
 				5EF94AA12425CF3600AADB4D /* AppDelegate.swift in Sources */,
 				5EF94AA32425CF3600AADB4D /* SceneDelegate.swift in Sources */,
