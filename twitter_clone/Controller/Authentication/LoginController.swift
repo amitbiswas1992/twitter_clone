@@ -20,29 +20,26 @@ class LoginController: UIViewController {
     }()
     
     private lazy var emailContainerView : UIView = {
-        var view = UIView()
-        view.backgroundColor = .systemPurple
-        view.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
-        let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "ic_mail_outline_white_2x-1")
-        view.addSubview(iv)
-        iv.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, paddingLeft: 8)
-        iv.setDimensions(width: 24, height: 24)
+        var image = #imageLiteral(resourceName: "ic_mail_outline_white_2x-1")
+        var view = Utilities().inputContainerView(withImage: image, textFiled: emailTextField)
         return view
     }()
     
     private lazy var passwordContainerView : UIView = {
-        var view = UIView()
-        view.backgroundColor = .systemPurple
-        view.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
-        let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "ic_lock_outline_white_2x")
-        view.addSubview(iv)
-        iv.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, paddingLeft: 8)
-        iv.setDimensions(width: 24, height: 24)
+        var image = #imageLiteral(resourceName: "ic_person_outline_white_2x")
+        var view = Utilities().inputContainerView(withImage: image, textFiled: passwordTextFiled)
         return view
+    }()
+    
+    private let emailTextField: UITextField = {
+        let tf = Utilities().textFiled(withPlaceholder: "Email")
+        return tf
+    }()
+    
+    private let passwordTextFiled : UITextField = {
+        let tf = Utilities().textFiled(withPlaceholder: "Password")
+        tf.isSecureTextEntry = true
+        return tf
     }()
     
     //MARK: - LifeCycle
